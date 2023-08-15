@@ -27,17 +27,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 # Inherit from mido device
 $(call inherit-product, device/xiaomi/sakura/device.mk)
 
-# Inherit some common SparkOS stuff.
-$(call inherit-product, vendor/spark/config/common_full_phone.mk)
+# Inherit some common nadOS stuff.
+$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
 
 # Poduct spec
 IS_PHONE := true
 scr_resolution := 1080
 
 # Device identifier. This must come after all inclusions
-DEVICE_MAINTAINER := mr_rishav_10
+DEVICE_MAINTAINER := Jeevesh
 PRODUCT_DEVICE := sakura
-PRODUCT_NAME := spark_sakura
+PRODUCT_NAME := nad_sakura
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 6 Pro
@@ -56,4 +56,4 @@ TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_BOOT_ANIMATION_RES := 1080
 WITH_GAPPS=true
 #Official
-ro.spark.maintainer=RISHAV
+ro.nad.maintainer=JEEVESH

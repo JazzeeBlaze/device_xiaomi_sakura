@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/spark_sakura.mk
+    $(LOCAL_DIR)/nad_sakura.mk
