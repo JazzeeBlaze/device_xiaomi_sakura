@@ -167,15 +167,7 @@ PRODUCT_PACKAGES += \
     libdng_sdk.vendor \
     libgui_vendor \
     camera.msm8953 \
-    libmm-qcamera \
-    Gcam
-	
-#my packs
-PRODUCT_PACKAGES += \
-	Youtube \
-	OPW \
-	APlayer \
-	MicroG
+    libmm-qcamera 
 
 # Codec2 modules
 PRODUCT_PACKAGES += \
