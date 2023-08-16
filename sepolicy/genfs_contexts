@@ -1,0 +1,63 @@
+# Boot reason
+genfscon proc  /sys/kernel/boot_reason   u:object_r:proc_boot_reason:s0
+
+# Leds
+genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-00/200f000.qcom,spmi:qcom,pm8953@0:qcom,leds@a100 u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/78b6000.i2c/i2c-2/2-0045/leds/ u:object_r:sysfs_leds:s0
+
+# Power
+genfscon sysfs /devices/soc/soc:qcom,bcl/power_supply                u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/msm-bcl-21/power_supply                  u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/qpnp-typec-9/power_supply                  u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-02/200f000.qcom,spmi:qcom,pmi8950@2:vadc@3100 u:object_r:sysfs_battery_supply:s0
+
+# /proc
+genfscon proc /last_kmsg                              u:object_r:proc_last_kmsg:s0
+genfscon proc /sys/vm/swappiness                      u:object_r:proc_swappiness:s0
+
+# RTC
+genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-00/200f000.qcom,spmi:qcom,pm8953@0:qcom,pm8953_rtc/rtc/rtc0/hctosys	u:object_r:sysfs_rtc:s0
+
+# Rmt
+genfscon debugfs /rmt_storage	u:object_r:debugfs_rmt:s0
+
+
+# Touchscreen
+genfscon proc /touchpanel	u:object_r:proc_touchpanel:s0
+
+# USB force fastcharge
+genfscon sysfs /kernel/fast_charge/force_fast_charge                                     u:object_r:sysfs_fcharge:s0
+
+# Earpiece gain
+genfscon sysfs /kernel/sound_control/earpiece_gain                                       u:object_r:sysfs_egain:s0
+
+# Headphone gain
+genfscon sysfs /kernel/sound_control/headphone_gain                                      u:object_r:sysfs_hgain:s0
+
+# Microphone gain
+genfscon sysfs /kernel/sound_control/mic_gain                                            u:object_r:sysfs_mgain:s0
+
+# Speaker gain
+genfscon sysfs /kernel/sound_control/speaker_gain                                            u:object_r:sysfs_sgain:s0
+
+# Touchboost
+genfscon sysfs /module/msm_performance/parameters/touchboost		u:object_r:sysfs_touchboost:s0
+
+# High Performance audio
+genfscon sysfs /module/snd_soc_wcd9330/parameters/high_perf_mode		u:object_r:sysfs_highperfaudio:s0
+
+# Backlight
+genfscon sysfs /module/mdss_fb/parameters/backlight_dimmer                               u:object_r:sysfs_backlight:s0
+
+# msm thermal
+genfscon sysfs /module/msm_thermal/core_control/enabled		u:object_r:sysfs_corecontrol:s0
+genfscon sysfs /module/msm_thermal/parameters/enabled		u:object_r:sysfs_msmthermal:s0
+genfscon sysfs /module/msm_thermal/vdd_restriction/enabled	u:object_r:sysfs_vddrestrict:s0
+
+# Torch brightness control
+genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_0/max_brightness            u:object_r:sysfs_tbrightness:s0
+genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1/max_brightness            u:object_r:sysfs_tbrightness:s0
+genfscon sysfs /class/leds/led:torch_0/max_brightness            u:object_r:sysfs_tbrightness:s0
+genfscon sysfs /class/leds/led:torch_1/max_brightness            u:object_r:sysfs_tbrightness:s0
+genfscon sysfs /devices/soc/leds-atc-25/driver/leds-atc-25/leds/charging/max_brightness		u:object_r:sysfs_chargeled:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,camera-flash/leds/torch-light1/max_brightness		u:object_r:sysfs_yintensity:s0
