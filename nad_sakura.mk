@@ -14,7 +14,6 @@ $(call inherit-product, device/xiaomi/sakura/device.mk)
 # Inherit some common nadOS stuff.
 $(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
-$(call inherit-product, vendor/oplauncher/OPLauncher.mk)
 
 # Product spec
 IS_PHONE := true
